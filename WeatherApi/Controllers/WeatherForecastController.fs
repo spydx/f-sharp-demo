@@ -4,7 +4,8 @@
 open System
 open Microsoft.AspNetCore.Mvc
 open Microsoft.Extensions.Logging
-open WeatherApi
+open WeatherApi.Models
+
 
 [<ApiController>]
 [<Route("api/[controller]")>]

@@ -7,8 +7,6 @@ open SwaggerProvider
 let [<Literal>] Schema = "https://localhost:5001/swagger/v1/swagger.json"
 type Weather = OpenApiClientProvider<Schema>
 
-// Straigth up example from https://fsprojects.github.io/SwaggerProvider/#/OpenApiClientProvider
-
 [<EntryPoint>]
 let main argv =
     let handler = new HttpClientHandler(UseCookies = false)
@@ -31,5 +29,5 @@ let main argv =
         |> Async.RunSynchronously
         |> Array.map( printfn "%O")
         |> ignore
-
+        
     0 // return an integer exit code
